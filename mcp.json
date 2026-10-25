@@ -1,0 +1,55 @@
+{
+  "mcpServers": {
+    "mikhail-lomonosov-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "TITAN_PROTOCOL": "LOMONOSOV",
+        "TARGET_CHAIN": "Sui",
+        "FIPS_203_LEVEL": "ML-KEM-768",
+        "FIPS_204_LEVEL": "ML-DSA-65"
+      },
+      "tools": [
+        {
+          "name": "verify_closed_vessel_mass_conservation",
+          "description": "Confirms total mass of sealed reaction vessel remains unchanged before and after chemical calcination",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pre_mass_g": {
+                "type": "number"
+              },
+              "post_mass_g": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "pre_mass_g",
+              "post_mass_g"
+            ]
+          }
+        },
+        {
+          "name": "detect_venusian_refraction_halo",
+          "description": "Models refractive light ring during solar transit of Venus revealing dense planetary atmosphere",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "ingress_timestamp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "ingress_timestamp"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

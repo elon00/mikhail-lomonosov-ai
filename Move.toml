@@ -1,0 +1,9 @@
+[package]
+name = "mikhail_lomonosov_ai"
+version = "1.0.0"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
+
+[addresses]
+mikhail_lomonosov_ai = "0x0"
